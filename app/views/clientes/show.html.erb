@@ -1,0 +1,38 @@
+<p>
+  <strong>Nome:</strong>
+  <%= @cliente.Nome %>
+</p>
+ 
+<p>
+  <strong>CPF:</strong>
+  <%= @cliente.CPF %>
+</p>
+ 
+<p>
+  <strong>Email:</strong>
+  <%= @cliente.Email %>
+</p>
+ 
+<p>
+  <strong>Endereço:</strong>
+  <%= @cliente.Endereco %>
+</p>
+ 
+<p>
+  <strong>Data_de_Nascimento:</strong>
+  <%= @cliente.Data_de_Nascimento %>
+</p>
+ 
+<p>
+  <strong>Status:</strong>
+  <%= @cliente.Status %>
+</p>
+
+<h2>Contribuições</h2>
+<%= render @cliente.pacotes %>
+ 
+<h2>Seja sócio:</h2>
+<%= render 'pacotes/form' %>
+
+<%= link_to 'Editar dados' , edit_cliente_path(@cliente) %>
+<%= link_to 'Voltar', clientes_path %>

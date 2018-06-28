@@ -1,0 +1,13 @@
+<%= form_with(model: [ @cliente, @cliente.pacotes.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :Pagamento %><br>
+    <%= form.text_field :Pagamento %>
+  </p>
+  <p>
+    <%= form.label :Plano %><br>
+    <%= form.text_area :Plano %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

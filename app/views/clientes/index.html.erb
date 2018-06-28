@@ -1,0 +1,28 @@
+<h1>Clientes</h1><br>
+<%= link_to 'Ajude-nos a derrotar Ganon', new_cliente_path %>
+<table>
+	<tr>
+		<th>Nome</th>
+		<th>CPF</th>
+		<th>Email</th>
+		<th>Endereco</th>
+		<th>Data_de_Nascimento</th>
+		<th colspan="3"></th>
+	</tr>
+	<% @clientes.each do |cliente|%>
+		<tr>
+		<td><%= cliente.Nome %></td>
+		<td><%= cliente.CPF %></td>
+		<td><%= cliente.Email %></td>
+		<td><%= cliente.Endereco %></td>
+		<td><%= cliente.Data_de_Nascimento %></td>
+		<td><%= cliente.Status %></td>
+		<td><%= link_to 'Administrar plano', cliente_path(cliente) %></td>	
+	    <td><%= link_to 'Editar dados', edit_cliente_path(cliente) %></td>
+	    <td><%= link_to 'Encerrar plano', cliente_path(cliente),
+              method: :delete,
+              data: { confirm: 'Tem certeza?' } %></td>
+		</tr>
+	<%end%>
+</table>
+	<%= link_to 'Voltar', controller: 'welcome' %>
