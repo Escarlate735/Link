@@ -27,11 +27,37 @@
   <strong>Status:</strong>
   <%= @cliente.Status %>
 </p>
+<script>
+  $(function(){
+    $(".0").hide();
+    $(".1").hide();
+  })
+</script>
 
-<h2>Pacotes</h2>
+<script>
+    $(function() {
+        $("#0").click(function(){
+            $(".0").slideToggle();
+        })
+    })
+</script>
+
+<button id="0" type="button">Ver/Esconder pacotes</button>
+
+<h2 class="0">Pacotes</h2>
 <%= render @cliente.pacotes %>
+
+<script>
+  $(function() {
+    $("#1").click(function(){
+      $(".1").slideToggle();
+    })
+  })
+</script>
+
+<button id="1" type="button">Novo Pacote</button>
  
-<h2>Seja sócio:</h2>
+<h2 class="1">Seja sócio:</h2>
 <%= render 'pacotes/form' %>
 
 <%= link_to 'Editar dados' , edit_cliente_path(@cliente) %>

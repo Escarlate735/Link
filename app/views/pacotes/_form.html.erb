@@ -1,11 +1,14 @@
+
 <%= form_with(model: [ @cliente, @cliente.pacotes.build ], local: true) do |form| %>
-  <p>
+  <p class="1">
     <%= form.label :Pagamento %><br>
     <%= form.text_field :Pagamento %>
   </p>
-  <p>
+  <p class="1">
     <%= form.label :Plano %><br>
     <%= select(:pacote, :Plano, [['fã de Zelda', 'fã de Zelda'], ['fã de Link', 'fã de Link'], ['fanático pelo time', 'fanático pelo time']]) %>
   </p>
+  <p class="1">
   <%= submit_tag "Comprar pacote" %>
+  </p>
 <% end %>

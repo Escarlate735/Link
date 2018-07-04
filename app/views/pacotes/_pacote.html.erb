@@ -1,13 +1,15 @@
-  <p>
+
+
+  <p class="0">
     <strong>Pagamento:</strong>
     <%= pacote.Pagamento %>
   </p>
  
-  <p>
+  <p class="0">
     <strong>Plano:</strong>
     <%= pacote.Plano %>
   </p>
-  <p>
+  <p class="0">
     <%= link_to 'Cancelar pacote', [pacote.cliente, pacote],
       method: :delete,
       data: { confirm: 'Tem certeza?'}  %>
