@@ -5,9 +5,7 @@
   </p>
   <p>
     <%= form.label :Plano %><br>
-    <%= form.text_area :Plano %>
+    <%= select(:pacote, :Plano, [['fã de Zelda', 'fã de Zelda'], ['fã de Link', 'fã de Link'], ['fanático pelo time', 'fanático pelo time']]) %>
   </p>
-  <p>
-    <%= form.submit %>
-  </p>
+  <%= submit_tag "Comprar pacote" %>
 <% end %>

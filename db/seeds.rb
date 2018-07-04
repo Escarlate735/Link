@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-=begin
+
 cliente = Cliente.create(
 	:Nome=>'Eduardo',
 	:CPF=>'001',
@@ -45,10 +45,4 @@ cliente = Cliente.create(
 	:Endereco=>'abc',
 	:Data_de_Nascimento=>'00_00_0000',
 	:Status=>'Aguardando pagamento'
-)
-=end
-pacotes = Pacote.create(
-	:Pagamento=>'1.000.000',
-	:Plano=>'fã de Link',
-	:cliente_id=>'3'
 )

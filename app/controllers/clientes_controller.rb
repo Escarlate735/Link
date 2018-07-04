@@ -8,7 +8,7 @@ class ClientesController < ApplicationController
   end
 
   def new
-    @cliente = Cliente.new
+    @cliente = Cliente.new(cliente_id: 2)
   end
 
   def edit

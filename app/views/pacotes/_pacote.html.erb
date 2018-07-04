@@ -1,16 +1,14 @@
-<% @cliente.pacotes.each do |pacote| %>
   <p>
     <strong>Pagamento:</strong>
     <%= pacote.Pagamento %>
   </p>
  
   <p>
-    <strong>Status:</strong>
+    <strong>Plano:</strong>
     <%= pacote.Plano %>
   </p>
   <p>
-  	<%= link_to 'Destroy Pacote', [pacote.cliente, pacote],
-  		method: :delete,
-  		data: { confirm: 'Tem certeza?'}	%>
+    <%= link_to 'Cancelar pacote', [pacote.cliente, pacote],
+      method: :delete,
+      data: { confirm: 'Tem certeza?'}  %>
   </p>
-<% end %>
