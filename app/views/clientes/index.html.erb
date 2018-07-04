@@ -19,7 +19,7 @@
 		<td><%= cliente.Status %></td>
 		<td><%= link_to 'Administrar plano', cliente_path(cliente) %></td>	
 	    <td><%= link_to 'Editar dados', edit_cliente_path(cliente) %></td>
-	    <td><%= link_to 'Encerrar plano', cliente_path(cliente),
+	    <td><%= link_to 'Encerrar conta', cliente_path(cliente),
               method: :delete,
               data: { confirm: 'Tem certeza?' } %></td>
 		</tr>
