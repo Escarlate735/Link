@@ -1,0 +1,6 @@
+@import 'materialize/components/color-variables';
+$primary-color: color("light-blue", "darken-4") !default;
+$secondary-color: color("light-blue", "darken-3") !default;
+//Essas cores podem ser vistas na documentação do materialize
+@import 'materialize'; //importamos o materialize.scss que veio com a gem
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
