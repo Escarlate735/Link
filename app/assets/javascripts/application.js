@@ -20,3 +20,5 @@
 
 $.jMaskGlobals.watchDataMask = true;
 $( document ).on('turbolinks:load',function() {$('select').formSelect();});
+$( document ).on('turbolinks:load',function() {$('.tooltipped').tooltip();});
+$( document ).on('turbolinks:load',function() {$('.modal').modal();});

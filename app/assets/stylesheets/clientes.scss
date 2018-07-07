@@ -2,3 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'app_materialize';
+
+body{
+background-image: image-url('triforce.jpg'), linear-gradient(to bottom, #023326 0%, #053335 50%, #0A1928 100%);
+background-position: center center;
+background-repeat: repeat, no-repeat;
+background-size: 2.5rem, cover;
+height: auto;
+min-height: 100%;
+}

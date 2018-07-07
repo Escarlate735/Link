@@ -1238,3 +1238,859 @@ Processing by ClientesController#show as HTML
 Completed 200 OK in 62ms (Views: 59.6ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/clientes/2" for 127.0.0.1 at 2018-07-06 22:47:54 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/gsvieira/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:7
+  Rendering clientes/show.html.erb within layouts/application
+  [1m[36mPacote Load (0.2ms)[0m  [1m[34mSELECT "pacotes".* FROM "pacotes" WHERE "pacotes"."cliente_id" = $1[0m  [["cliente_id", 2]]
+  ↳ app/views/clientes/show.html.erb:48
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered pacotes/_form.html.erb (27.0ms)
+  Rendered clientes/show.html.erb within layouts/application (42.5ms)
+Completed 200 OK in 2023ms (Views: 1981.6ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-06 22:48:00 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.5ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:12
+  Rendered clientes/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 122ms (Views: 121.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-07-06 22:48:12 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 87ms (Views: 86.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-06 22:48:16 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:12
+  Rendered clientes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 63ms (Views: 61.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clientes/2" for 127.0.0.1 at 2018-07-06 22:48:23 -0300
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCliente Load (0.3ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:7
+  Rendering clientes/show.html.erb within layouts/application
+  [1m[36mPacote Load (0.3ms)[0m  [1m[34mSELECT "pacotes".* FROM "pacotes" WHERE "pacotes"."cliente_id" = $1[0m  [["cliente_id", 2]]
+  ↳ app/views/clientes/show.html.erb:48
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered pacotes/_form.html.erb (3.5ms)
+  Rendered clientes/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 65ms (Views: 62.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/clientes/2" for 127.0.0.1 at 2018-07-06 22:56:49 -0300
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCliente Load (0.4ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:7
+  Rendering clientes/show.html.erb within layouts/application
+  [1m[36mPacote Load (0.4ms)[0m  [1m[34mSELECT "pacotes".* FROM "pacotes" WHERE "pacotes"."cliente_id" = $1[0m  [["cliente_id", 2]]
+  ↳ app/views/clientes/show.html.erb:48
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered pacotes/_form.html.erb (5.4ms)
+  Rendered clientes/show.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 75ms (Views: 72.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-06 22:56:54 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 52ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-06 23:00:53 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 54ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-06 23:02:00 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 63ms (Views: 61.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-06 23:02:08 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 45ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-06 23:03:20 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 62ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-06 23:19:13 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (2.4ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:12
+  Rendered clientes/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 60ms (Views: 51.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-06 23:19:47 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 56ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clientes.html" for 127.0.0.1 at 2018-07-06 23:19:50 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.4ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:12
+  Rendered clientes/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 64ms (Views: 63.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-06 23:22:02 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 57ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-06 23:38:09 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 58ms (Views: 57.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clientes.html" for 127.0.0.1 at 2018-07-06 23:38:11 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (1.6ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:19
+  Rendered clientes/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 60ms (Views: 58.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/clientes.html" for 127.0.0.1 at 2018-07-06 23:45:55 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (2.4ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:22
+  Rendered clientes/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 305ms (Views: 302.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/clientes.html" for 127.0.0.1 at 2018-07-06 23:51:03 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:23
+  Rendered clientes/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 75ms (Views: 73.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clientes.html" for 127.0.0.1 at 2018-07-06 23:53:20 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.4ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:23
+  Rendered clientes/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 66ms (Views: 65.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/clientes.html" for 127.0.0.1 at 2018-07-06 23:53:30 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:23
+  Rendered clientes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 57ms (Views: 55.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clientes.html" for 127.0.0.1 at 2018-07-07 00:00:16 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.6ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:23
+  Rendered clientes/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 83ms (Views: 81.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/clientes.html" for 127.0.0.1 at 2018-07-07 00:00:49 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (1.7ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:23
+  Rendered clientes/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 59ms (Views: 56.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/clientes.html" for 127.0.0.1 at 2018-07-07 00:07:38 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.4ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:23
+  Rendered clientes/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 9784ms (Views: 9782.6ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE DATABASE "project_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE "project_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(279088437195799245)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (9.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(279088437195799245)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-07-07 00:48:48 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/gsvieira/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 8432ms (Views: 8418.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clientes.html" for 127.0.0.1 at 2018-07-07 00:49:26 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (20.3ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:15
+  Rendered clientes/index.html.erb within layouts/application (39.1ms)
+Completed 200 OK in 103ms (Views: 71.6ms | ActiveRecord: 23.2ms)
+
+
+Started GET "/clientes.html" for 127.0.0.1 at 2018-07-07 02:26:31 -0300
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/gsvieira/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (8.6ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:15
+  Rendered clientes/index.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 2458ms (Views: 2424.2ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/clientes.html" for 127.0.0.1 at 2018-07-07 02:28:17 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (1.4ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:15
+  Rendered clientes/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 6906ms (Views: 6903.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 02:42:35 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 104ms (Views: 103.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 02:45:55 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 118ms (Views: 116.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 02:47:37 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 53ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 02:49:51 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 71ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 02:50:24 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 173ms (Views: 119.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 02:51:14 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 55ms (Views: 54.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 02:51:41 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (56.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:15
+  Rendered clientes/index.html.erb within layouts/application (58.1ms)
+Completed 200 OK in 178ms (Views: 55.9ms | ActiveRecord: 56.2ms)
+
+
+Started GET "/clientes/new" for 127.0.0.1 at 2018-07-07 02:51:44 -0300
+Processing by ClientesController#new as HTML
+  Rendering clientes/new.html.erb within layouts/application
+  Rendered clientes/_form.html.erb (228.8ms)
+  Rendered clientes/new.html.erb within layouts/application (230.2ms)
+Completed 200 OK in 333ms (Views: 316.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 02:51:52 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (1.9ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:15
+  Rendered clientes/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 63ms (Views: 59.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 02:56:53 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 60ms (Views: 59.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 02:57:04 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 76ms (Views: 75.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 03:00:26 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 62ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 03:09:56 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 60ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 03:10:35 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 74ms (Views: 73.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 03:11:03 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 62ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 03:15:43 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 03:16:17 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (1.0ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:15
+  Rendered clientes/index.html.erb within layouts/application (46.5ms)
+Completed 200 OK in 109ms (Views: 97.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/clientes/new" for 127.0.0.1 at 2018-07-07 03:19:39 -0300
+Processing by ClientesController#new as HTML
+  Rendering clientes/new.html.erb within layouts/application
+  Rendered clientes/_form.html.erb (52.2ms)
+  Rendered clientes/new.html.erb within layouts/application (54.8ms)
+Completed 200 OK in 112ms (Views: 110.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clientes/new" for 127.0.0.1 at 2018-07-07 03:21:30 -0300
+Processing by ClientesController#new as HTML
+  Rendering clientes/new.html.erb within layouts/application
+  Rendered clientes/_form.html.erb (2.4ms)
+  Rendered clientes/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 73ms (Views: 72.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 03:21:51 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.5ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:15
+  Rendered clientes/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 70ms (Views: 68.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 03:22:10 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:15
+  Rendered clientes/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 74ms (Views: 72.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 03:23:15 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.5ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:16
+  Rendered clientes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 61ms (Views: 60.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 03:29:06 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (3.0ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:15
+  Rendered clientes/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 673ms (Views: 667.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/clientes/new" for 127.0.0.1 at 2018-07-07 03:29:18 -0300
+Processing by ClientesController#new as HTML
+  Rendering clientes/new.html.erb within layouts/application
+  Rendered clientes/_form.html.erb (2.4ms)
+  Rendered clientes/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 65ms (Views: 64.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 03:31:58 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.3ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:15
+  Rendered clientes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 62ms (Views: 60.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 03:34:48 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.4ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:16
+  Rendered clientes/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 62ms (Views: 60.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 03:35:38 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (1.9ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:16
+  Rendered clientes/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 66ms (Views: 63.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 03:36:37 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.3ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:17
+  Rendered clientes/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 66ms (Views: 65.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-07-07 03:37:24 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 59ms (Views: 58.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-07-07 03:42:27 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 61ms (Views: 60.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 03:42:30 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.4ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:18
+  Rendered clientes/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 63ms (Views: 62.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 03:46:10 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.6ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:18
+  Rendered clientes/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 66ms (Views: 64.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 03:46:56 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:18
+  Rendered clientes/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 58ms (Views: 57.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 03:49:42 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.3ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:20
+  Rendered clientes/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 61ms (Views: 59.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 03:50:12 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.3ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:20
+  Rendered clientes/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 60ms (Views: 58.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 03:51:20 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (1.6ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:21
+  Rendered clientes/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 59ms (Views: 56.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 03:54:23 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.3ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:29
+  Rendered clientes/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 62ms (Views: 60.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 03:55:21 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.5ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:28
+  Rendered clientes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 59ms (Views: 57.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 03:58:52 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.3ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:28
+  Rendered clientes/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 63ms (Views: 62.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/clientes/2/edit" for 127.0.0.1 at 2018-07-07 04:05:39 -0300
+Processing by ClientesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCliente Load (10.7ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:15
+  Rendering clientes/edit.html.erb within layouts/application
+  Rendered clientes/_form.html.erb (35.5ms)
+  Rendered clientes/edit.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 884ms (Views: 134.3ms | ActiveRecord: 25.7ms)
+
+
+Started GET "/clientes/2" for 127.0.0.1 at 2018-07-07 04:05:42 -0300
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:7
+  Rendering clientes/show.html.erb within layouts/application
+  [1m[36mPacote Load (1.3ms)[0m  [1m[34mSELECT "pacotes".* FROM "pacotes" WHERE "pacotes"."cliente_id" = $1[0m  [["cliente_id", 2]]
+  ↳ app/views/clientes/show.html.erb:48
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered pacotes/_form.html.erb (32.9ms)
+  Rendered clientes/show.html.erb within layouts/application (71.2ms)
+Completed 200 OK in 127ms (Views: 113.7ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 04:10:55 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  Rendered clientes/index.html.erb within layouts/application (38.3ms)
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/gsvieira/Documents/Link/app/views/clientes/index.html.erb:43: syntax error, unexpected tLABEL
+...@output_buffer.append=( method: :delete,
+...                        ^~~~~~~):
+  
+app/views/clientes/index.html.erb:43: syntax error, unexpected tLABEL
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 04:47:57 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (1.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:32
+  Rendered clientes/index.html.erb within layouts/application (621.7ms)
+Completed 500 Internal Server Error in 629ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `cliente' for #<#<Class:0x00007f71b8522e80>:0x00007f71bbe492b8>
+Did you mean?  @clientes):
+    53: 				<div class="modal-footer">
+    54: 				<a  class="modal-close waves-effect waves-green btn-flat">Não</a>
+    55: 				<!-- <a  class="modal-close modal-action waves-effect waves-green btn-flat">Sim</a> -->
+    56: 				<%= button_to 'Encerrar conta', cliente_path(cliente),
+    57: method: :delete %>
+    58: 			</div>
+    59: 			</div>
+  
+app/views/clientes/index.html.erb:56:in `_app_views_clientes_index_html_erb___2666672339503564533_70063230177420'
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 04:48:44 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.3ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:32
+  Rendered clientes/index.html.erb within layouts/application (716.2ms)
+Completed 500 Internal Server Error in 724ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `cliente' for #<#<Class:0x00007f71b8522e80>:0x00007f71ba59df98>
+Did you mean?  @clientes):
+    53: 				<div class="modal-footer">
+    54: 				<a  class="modal-close waves-effect waves-green btn-flat">Não</a>
+    55: 				<!-- <a  class="modal-close modal-action waves-effect waves-green btn-flat">Sim</a> -->
+    56: 				<%= link_to 'Encerrar conta', cliente_path(cliente),
+    57: method: :delete %>
+    58: 			</div>
+    59: 			</div>
+  
+app/views/clientes/index.html.erb:56:in `_app_views_clientes_index_html_erb___2666672339503564533_70063217243220'
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 04:51:43 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:32
+  Rendered clientes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 295ms (Views: 293.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 04:52:05 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (2.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:32
+  Rendered clientes/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 56ms (Views: 53.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 04:52:59 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.5ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:32
+  Rendered clientes/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 48ms (Views: 46.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/clientes/2/edit" for 127.0.0.1 at 2018-07-07 04:58:49 -0300
+Processing by ClientesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCliente Load (0.5ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:15
+  Rendering clientes/edit.html.erb within layouts/application
+  Rendered clientes/_form.html.erb (28.5ms)
+  Rendered clientes/edit.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 72ms (Views: 69.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/clientes/2" for 127.0.0.1 at 2018-07-07 04:59:04 -0300
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCliente Load (0.3ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:7
+  Rendering clientes/show.html.erb within layouts/application
+  [1m[36mPacote Load (2.0ms)[0m  [1m[34mSELECT "pacotes".* FROM "pacotes" WHERE "pacotes"."cliente_id" = $1[0m  [["cliente_id", 2]]
+  ↳ app/views/clientes/show.html.erb:48
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered pacotes/_form.html.erb (20.6ms)
+  Rendered clientes/show.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 95ms (Views: 91.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/clientes/2" for 127.0.0.1 at 2018-07-07 04:59:09 -0300
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:7
+  Rendering clientes/show.html.erb within layouts/application
+  [1m[36mPacote Load (1.5ms)[0m  [1m[34mSELECT "pacotes".* FROM "pacotes" WHERE "pacotes"."cliente_id" = $1[0m  [["cliente_id", 2]]
+  ↳ app/views/clientes/show.html.erb:48
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered pacotes/_form.html.erb (3.9ms)
+  Rendered clientes/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 62ms (Views: 58.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 05:00:04 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 57ms (Views: 56.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 05:00:10 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:32
+  Rendered clientes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 56ms (Views: 55.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clientes/new" for 127.0.0.1 at 2018-07-07 05:00:15 -0300
+Processing by ClientesController#new as HTML
+  Rendering clientes/new.html.erb within layouts/application
+  Rendered clientes/_form.html.erb (2.0ms)
+  Rendered clientes/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 61ms (Views: 60.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 05:00:20 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.9ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:32
+  Rendered clientes/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 58ms (Views: 56.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/clientes/2/edit" for 127.0.0.1 at 2018-07-07 05:00:53 -0300
+Processing by ClientesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCliente Load (0.3ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:15
+  Rendering clientes/edit.html.erb within layouts/application
+  Rendered clientes/_form.html.erb (4.0ms)
+  Rendered clientes/edit.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 69ms (Views: 55.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/clientes/2/edit" for 127.0.0.1 at 2018-07-07 05:02:24 -0300
+Processing by ClientesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:15
+  Rendering clientes/edit.html.erb within layouts/application
+  Rendered clientes/_form.html.erb (2.2ms)
+  Rendered clientes/edit.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 61ms (Views: 59.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 05:04:44 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.4ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:32
+  Rendered clientes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/clientes/new" for 127.0.0.1 at 2018-07-07 05:04:48 -0300
+Processing by ClientesController#new as HTML
+  Rendering clientes/new.html.erb within layouts/application
+  Rendered clientes/_form.html.erb (4.0ms)
+  Rendered clientes/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 59ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clientes/new" for 127.0.0.1 at 2018-07-07 05:05:07 -0300
+Processing by ClientesController#new as HTML
+  Rendering clientes/new.html.erb within layouts/application
+  Rendered clientes/_form.html.erb (2.1ms)
+  Rendered clientes/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 57ms (Views: 56.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-07-07 05:05:15 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 53ms (Views: 52.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 05:05:18 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.5ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:32
+  Rendered clientes/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/clientes/2" for 127.0.0.1 at 2018-07-07 05:05:29 -0300
+Processing by ClientesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9V1gmT2BL77OfA5zfBMQ0JOreXU/GJpSlZA6MBPSr9qjTmys64/SKzC1aNW6geyUGYt0SzYUTrqmYPWg7zOryw==", "id"=>"2"}
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/clientes_controller.rb:40
+  [1m[36mPacote Load (0.3ms)[0m  [1m[34mSELECT "pacotes".* FROM "pacotes" WHERE "pacotes"."cliente_id" = $1[0m  [["cliente_id", 2]]
+  ↳ app/controllers/clientes_controller.rb:40
+  [1m[36mCliente Destroy (12.0ms)[0m  [1m[31mDELETE FROM "clientes" WHERE "clientes"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/clientes_controller.rb:40
+  [1m[35m (24.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/clientes_controller.rb:40
+Redirected to http://localhost:3000/clientes
+Completed 302 Found in 303ms (ActiveRecord: 37.1ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-07 05:05:29 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:32
+  Rendered clientes/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.2ms)
+
+
