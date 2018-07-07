@@ -1238,3 +1238,336 @@ Processing by ClientesController#show as HTML
 Completed 200 OK in 62ms (Views: 59.6ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/clientes" for 127.0.0.1 at 2018-07-06 22:59:30 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/gustavo/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.4ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:12
+  Rendered clientes/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 7050ms (Views: 7039.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-07-06 22:59:41 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 46ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-06 22:59:42 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.9ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:12
+  Rendered clientes/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/clientes/19" for 127.0.0.1 at 2018-07-06 22:59:45 -0300
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mCliente Load (0.6ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:7
+  Rendering clientes/show.html.erb within layouts/application
+  [1m[36mPacote Load (0.9ms)[0m  [1m[34mSELECT "pacotes".* FROM "pacotes" WHERE "pacotes"."cliente_id" = $1[0m  [["cliente_id", 19]]
+  ↳ app/views/clientes/show.html.erb:48
+  Rendered collection of pacotes/_pacote.html.erb [3 times] (20.1ms)
+  Rendered pacotes/_form.html.erb (137.3ms)
+  Rendered clientes/show.html.erb within layouts/application (365.5ms)
+Completed 200 OK in 436ms (Views: 400.0ms | ActiveRecord: 9.7ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(279088437195799245)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (16.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(279088437195799245)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCliente Create (31.4ms)[0m  [1m[32mINSERT INTO "clientes" ("Nome", "CPF", "Email", "Endereco", "Data_de_Nascimento", "Status", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["Nome", "Eduardo"], ["CPF", "001"], ["Email", "edu@eee.com"], ["Endereco", "abc"], ["Data_de_Nascimento", "11_11_1111"], ["Status", "Ativo"], ["created_at", "2018-07-07 02:01:25.344792"], ["updated_at", "2018-07-07 02:01:25.344792"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (14.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mCliente Create (0.7ms)[0m  [1m[32mINSERT INTO "clientes" ("Nome", "CPF", "Email", "Endereco", "Data_de_Nascimento", "Status", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["Nome", "Lancellotti"], ["CPF", "002"], ["Email", "lança@eee.com"], ["Endereco", "abc"], ["Data_de_Nascimento", "22_22_2222"], ["Status", "Ativo"], ["created_at", "2018-07-07 02:01:25.395242"], ["updated_at", "2018-07-07 02:01:25.395242"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mCliente Create (0.9ms)[0m  [1m[32mINSERT INTO "clientes" ("Nome", "CPF", "Email", "Endereco", "Data_de_Nascimento", "Status", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["Nome", "Gabriel"], ["CPF", "003"], ["Email", "gabs@eee.com"], ["Endereco", "abc"], ["Data_de_Nascimento", "33_33_3333"], ["Status", "Ativo"], ["created_at", "2018-07-07 02:01:25.405690"], ["updated_at", "2018-07-07 02:01:25.405690"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mCliente Create (0.7ms)[0m  [1m[32mINSERT INTO "clientes" ("Nome", "CPF", "Email", "Endereco", "Data_de_Nascimento", "Status", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["Nome", "Henrique"], ["CPF", "004"], ["Email", "henry@eee.com"], ["Endereco", "abc"], ["Data_de_Nascimento", "44_44_4444"], ["Status", "Ativo"], ["created_at", "2018-07-07 02:01:25.416981"], ["updated_at", "2018-07-07 02:01:25.416981"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:41
+  [1m[36mCliente Create (0.7ms)[0m  [1m[32mINSERT INTO "clientes" ("Nome", "CPF", "Email", "Endereco", "Data_de_Nascimento", "Status", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["Nome", "Gustavo"], ["CPF", "007"], ["Email", "espiaorrusso@eee.com"], ["Endereco", "abc"], ["Data_de_Nascimento", "00_00_0000"], ["Status", "Aguardando pagamento"], ["created_at", "2018-07-07 02:01:25.429433"], ["updated_at", "2018-07-07 02:01:25.429433"]]
+  ↳ db/seeds.rb:41
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:41
+Started GET "/clientes" for 127.0.0.1 at 2018-07-06 23:01:28 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.5ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:12
+  Rendered clientes/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 32ms (Views: 26.5ms | ActiveRecord: 3.8ms)
+
+
+Started DELETE "/clientes/41" for 127.0.0.1 at 2018-07-06 23:01:32 -0300
+Processing by ClientesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uj9fru4+bwSSMOAEd7xF5dct0eIV1jam7z87NdwO+S5XIef/HUNvcbrmpweD6e2LhhUiPxmfHXcRxo1/UL3jtw==", "id"=>"41"}
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/clientes_controller.rb:40
+  [1m[36mPacote Load (0.3ms)[0m  [1m[34mSELECT "pacotes".* FROM "pacotes" WHERE "pacotes"."cliente_id" = $1[0m  [["cliente_id", 41]]
+  ↳ app/controllers/clientes_controller.rb:40
+  [1m[36mCliente Destroy (0.4ms)[0m  [1m[31mDELETE FROM "clientes" WHERE "clientes"."id" = $1[0m  [["id", 41]]
+  ↳ app/controllers/clientes_controller.rb:40
+  [1m[35m (18.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/clientes_controller.rb:40
+Redirected to http://localhost:3000/clientes
+Completed 302 Found in 28ms (ActiveRecord: 21.1ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-06 23:01:32 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:12
+  Rendered clientes/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/clientes/40" for 127.0.0.1 at 2018-07-06 23:01:35 -0300
+Processing by ClientesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NAgig9zr8BSTw5g4E7JKcFZ8Gn48pz6+0q6w1k8yvFHZFprSL5bwYbsV3zvn5+IeB0TpozDuFW8sVwacw4GmyA==", "id"=>"40"}
+  [1m[36mCliente Load (0.4ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/clientes_controller.rb:40
+  [1m[36mPacote Load (0.3ms)[0m  [1m[34mSELECT "pacotes".* FROM "pacotes" WHERE "pacotes"."cliente_id" = $1[0m  [["cliente_id", 40]]
+  ↳ app/controllers/clientes_controller.rb:40
+  [1m[36mCliente Destroy (0.8ms)[0m  [1m[31mDELETE FROM "clientes" WHERE "clientes"."id" = $1[0m  [["id", 40]]
+  ↳ app/controllers/clientes_controller.rb:40
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/clientes_controller.rb:40
+Redirected to http://localhost:3000/clientes
+Completed 302 Found in 9ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-06 23:01:35 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.3ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:12
+  Rendered clientes/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/clientes/39" for 127.0.0.1 at 2018-07-06 23:01:37 -0300
+Processing by ClientesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rMvImOCGX22E8zL9kAdpgEosFeuPUHYwhS2QvmvBA4ZB1XDJE/tfGKwldf5kUsHuGxTmNoMZXeF71Cb053IZHw==", "id"=>"39"}
+  [1m[36mCliente Load (0.5ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/clientes_controller.rb:40
+  [1m[36mPacote Load (0.5ms)[0m  [1m[34mSELECT "pacotes".* FROM "pacotes" WHERE "pacotes"."cliente_id" = $1[0m  [["cliente_id", 39]]
+  ↳ app/controllers/clientes_controller.rb:40
+  [1m[36mCliente Destroy (0.7ms)[0m  [1m[31mDELETE FROM "clientes" WHERE "clientes"."id" = $1[0m  [["id", 39]]
+  ↳ app/controllers/clientes_controller.rb:40
+  [1m[35m (135.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/clientes_controller.rb:40
+Redirected to http://localhost:3000/clientes
+Completed 302 Found in 144ms (ActiveRecord: 137.4ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-06 23:01:37 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.8ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:12
+  Rendered clientes/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 43ms (Views: 39.4ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/clientes/38" for 127.0.0.1 at 2018-07-06 23:01:39 -0300
+Processing by ClientesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"n6HqypzAPMXTYJWzK7gckcPp25h7x7AxHnVpaeMCEFVyv1Kbb708sPu20rDf7bT/ktEoRXeOm+DgjN8jb7EKzA==", "id"=>"38"}
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/clientes_controller.rb:40
+  [1m[36mPacote Load (0.1ms)[0m  [1m[34mSELECT "pacotes".* FROM "pacotes" WHERE "pacotes"."cliente_id" = $1[0m  [["cliente_id", 38]]
+  ↳ app/controllers/clientes_controller.rb:40
+  [1m[36mCliente Destroy (0.3ms)[0m  [1m[31mDELETE FROM "clientes" WHERE "clientes"."id" = $1[0m  [["id", 38]]
+  ↳ app/controllers/clientes_controller.rb:40
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/clientes_controller.rb:40
+Redirected to http://localhost:3000/clientes
+Completed 302 Found in 10ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-06 23:01:39 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.4ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:12
+  Rendered clientes/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/clientes/37" for 127.0.0.1 at 2018-07-06 23:01:42 -0300
+Processing by ClientesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"a8oHSEo2G+KysnQnOq9nnciGLEQqgzwko1SJ/o2XrIqG1L8ZuUsbl5pkMyTO+s/zmb7fmSbKF/VdrT+0ASS2Ew==", "id"=>"37"}
+  [1m[36mCliente Load (0.7ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/clientes_controller.rb:40
+  [1m[36mPacote Load (1.0ms)[0m  [1m[34mSELECT "pacotes".* FROM "pacotes" WHERE "pacotes"."cliente_id" = $1[0m  [["cliente_id", 37]]
+  ↳ app/controllers/clientes_controller.rb:40
+  [1m[36mCliente Destroy (0.7ms)[0m  [1m[31mDELETE FROM "clientes" WHERE "clientes"."id" = $1[0m  [["id", 37]]
+  ↳ app/controllers/clientes_controller.rb:40
+  [1m[35m (45.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/clientes_controller.rb:40
+Redirected to http://localhost:3000/clientes
+Completed 302 Found in 56ms (ActiveRecord: 48.6ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2018-07-06 23:01:42 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.7ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:12
+  Rendered clientes/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/clientes/19" for 127.0.0.1 at 2018-07-06 23:01:45 -0300
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mCliente Load (0.8ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:7
+  Rendering clientes/show.html.erb within layouts/application
+  [1m[36mPacote Load (0.6ms)[0m  [1m[34mSELECT "pacotes".* FROM "pacotes" WHERE "pacotes"."cliente_id" = $1[0m  [["cliente_id", 19]]
+  ↳ app/views/clientes/show.html.erb:48
+  Rendered collection of pacotes/_pacote.html.erb [3 times] (1.4ms)
+  Rendered pacotes/_form.html.erb (1.9ms)
+  Rendered clientes/show.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 47ms (Views: 40.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/clientes/19" for 127.0.0.1 at 2018-07-06 23:02:51 -0300
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mCliente Load (0.6ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:7
+  Rendering clientes/show.html.erb within layouts/application
+  [1m[36mPacote Load (0.4ms)[0m  [1m[34mSELECT "pacotes".* FROM "pacotes" WHERE "pacotes"."cliente_id" = $1[0m  [["cliente_id", 19]]
+  ↳ app/views/clientes/show.html.erb:48
+  Rendered collection of pacotes/_pacote.html.erb [3 times] (2.2ms)
+  Rendered pacotes/_form.html.erb (3.5ms)
+  Rendered clientes/show.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 48ms (Views: 42.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/clientes/new" for 127.0.0.1 at 2018-07-06 23:08:34 -0300
+Processing by ClientesController#new as HTML
+  Rendering clientes/new.html.erb within layouts/application
+  Rendered clientes/_form.html.erb (11.2ms)
+  Rendered clientes/new.html.erb within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2)):
+    39: 
+    40:   <p>
+    41:     <%= form.label :Status %><br>
+    42:     <%= select(:cliente, :Status[['Ativo', 'Ativo'], ['Aguardando pagamento', 'Aguardando pagamento'], ['Cancelado', 'fanático pelo time']]) %>
+    43:   </p>
+    44: 
+    45:   <p>
+  
+app/views/clientes/_form.html.erb:42:in `[]'
+app/views/clientes/_form.html.erb:42:in `block in _app_views_clientes__form_html_erb___1310745435267006344_69942930360940'
+app/views/clientes/_form.html.erb:1:in `_app_views_clientes__form_html_erb___1310745435267006344_69942930360940'
+app/views/clientes/new.html.erb:2:in `_app_views_clientes_new_html_erb__2723016118994466957_69942930375580'
+Started GET "/clientes/new" for 127.0.0.1 at 2018-07-06 23:09:15 -0300
+Processing by ClientesController#new as HTML
+  Rendering clientes/new.html.erb within layouts/application
+  Rendered clientes/_form.html.erb (2.5ms)
+  Rendered clientes/new.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2)):
+    39: 
+    40:   <p>
+    41:     <%= form.label :Status %><br>
+    42:     <%= select(:cliente, :Status[['Aguardando pagamento', 'Aguardando pagamento'], ['Ativo', 'Ativo'], ['Cancelado', 'Cancelado']]) %>
+    43:   </p>
+    44: 
+    45:   <p>
+  
+app/views/clientes/_form.html.erb:42:in `[]'
+app/views/clientes/_form.html.erb:42:in `block in _app_views_clientes__form_html_erb___1310745435267006344_69942923037700'
+app/views/clientes/_form.html.erb:1:in `_app_views_clientes__form_html_erb___1310745435267006344_69942923037700'
+app/views/clientes/new.html.erb:2:in `_app_views_clientes_new_html_erb__2723016118994466957_69942923051620'
+Started GET "/clientes/new" for 127.0.0.1 at 2018-07-06 23:09:28 -0300
+Processing by ClientesController#new as HTML
+  Rendering clientes/new.html.erb within layouts/application
+  Rendered clientes/_form.html.erb (4.0ms)
+  Rendered clientes/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/clientes" for 127.0.0.1 at 2018-07-06 23:09:33 -0300
+Processing by ClientesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zAOCJM6bUj5DjnZefhXxDAIDmjZt9tEJdkYNSyRHur8hHTp1PeZSS2tYMV2KQFliUztp62G/+tiIv7sBqPSgJg==", "cliente"=>{"Nome"=>"", "CPF"=>"", "Email"=>"", "Endereco"=>"", "Data_de_Nascimento"=>"", "Status"=>"Aguardando pagamento"}, "commit"=>"Create Cliente"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/clientes_controller.rb:21
+  [1m[36mCliente Create (0.7ms)[0m  [1m[32mINSERT INTO "clientes" ("Nome", "CPF", "Email", "Endereco", "Data_de_Nascimento", "Status", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["Nome", ""], ["CPF", ""], ["Email", ""], ["Endereco", ""], ["Data_de_Nascimento", ""], ["Status", "Aguardando pagamento"], ["created_at", "2018-07-07 02:09:33.660459"], ["updated_at", "2018-07-07 02:09:33.660459"]]
+  ↳ app/controllers/clientes_controller.rb:21
+  [1m[35m (12.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/clientes_controller.rb:21
+Redirected to http://localhost:3000/clientes/42
+Completed 302 Found in 18ms (ActiveRecord: 13.7ms)
+
+
+Started GET "/clientes/42" for 127.0.0.1 at 2018-07-06 23:09:33 -0300
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"42"}
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/clientes_controller.rb:7
+  Rendering clientes/show.html.erb within layouts/application
+  [1m[36mPacote Load (0.2ms)[0m  [1m[34mSELECT "pacotes".* FROM "pacotes" WHERE "pacotes"."cliente_id" = $1[0m  [["cliente_id", 42]]
+  ↳ app/views/clientes/show.html.erb:48
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered pacotes/_form.html.erb (1.6ms)
+  Rendered clientes/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 0.6ms)
+
+
