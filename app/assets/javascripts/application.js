@@ -12,7 +12,11 @@
 //
 //= require rails-ujs
 //= require jquery
+//= require jquery-mask-plugin
 //= require activestorage
 //= require turbolinks
 //= require materialize
 //= require_tree .
+
+$.jMaskGlobals.watchDataMask = true;
+$( document ).on('turbolinks:load',function() {$('select').formSelect();});
