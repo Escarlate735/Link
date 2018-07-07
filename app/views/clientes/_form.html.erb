@@ -42,7 +42,7 @@
 
   <p>
     <%= form.label :Status %><br>
-    <%= form.text_field :Status %>
+    <%= select(:cliente, :Status, [['Aguardando pagamento', 'Aguardando pagamento'], ['Ativo', 'Ativo'], ['Cancelado', 'Cancelado']]) %>
   </p>
 
   <p>
