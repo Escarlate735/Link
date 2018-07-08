@@ -15,6 +15,7 @@
       </ul>
     </div>
   <% end %>
+
   <p>
     <%= form.label :Nome %><br>
     <%= form.text_field :Nome %>
@@ -22,27 +23,26 @@
 
   <p>
     <%= form.label :CPF %><br>
-    <%= form.text_field :CPF %>
+    <%= form.text_field :CPF, 'data-mask':"000.000.000-00", placeholder:"000.000.000-00"%>
   </p>
-
   <p>
     <%= form.label :Email %><br>
-    <%= form.text_field :Email %>
+    <%= form.text_field :Email%>
   </p>
 
   <p>
     <%= form.label :Endereco %><br>
-    <%= form.text_field :Endereco %>
+    <%= form.text_field :Endereco, 'data-mask':"Quadra 000 Conjunto 00 Casa 00", placeholder:"Quadra 000 Conjunto 00 Casa 00"%>
   </p>
 
   <p>
     <%= form.label :Data_de_Nascimento %><br>
-    <%= form.text_field :Data_de_Nascimento %>
+    <%= form.text_field :Data_de_Nascimento, 'data-mask':"00/00/0000", placeholder:"00/00/0000"%>
   </p>
 
   <p>
     <%= form.label :Status %><br>
-    <%= select(:cliente, :Status, [['Aguardando pagamento', 'Aguardando pagamento'], ['Ativo', 'Ativo'], ['Cancelado', 'Cancelado']]) %>
+    <%= select(:cliente, :Status, [['Ativo', 'Ativo'], ['Aguardando pagamento', 'Aguardando pagamento'], ['Cancelado', 'Cancelado']], selected: 'Aguardando pagamento')%>
   </p>
 
   <p>

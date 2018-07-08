@@ -1,12 +1,11 @@
 <nav>
 	<div class="nav-wrapper">
 		<div class="col s12">
-			<a href="http://localhost:3000/welcome/index" class="breadcrumb">Welcome</a>
-			<a href="http://localhost:3000/clientes" class="breadcrumb">Patrocinadores</a>
+      <%= link_to 'Home', { controller: 'welcome'} , class: 'breadcrumb'%>
+      <%= link_to 'Patrocinadores', clientes_path, class: 'breadcrumb'%>
 		</div>
 	</div>
 </nav>
-
 
 <div class="section no-pad-bot">
 	<div class="container">
@@ -37,9 +36,9 @@
 					<td><%= cliente.Endereco %></td>
 					<td><%= cliente.Data_de_Nascimento %></td>
 					<td><%= cliente.Status %></td>
-					<td><a href="http://localhost:3000/clientes/2" class="waves-effect waves-light btn">Info</a> </td>
-				    <td><a href="http://localhost:3000/clientes/2/edit"class="waves-effect waves-light btn">Editar</a></td>
-				    <td><%= link_to 'Encerrar conta', cliente_path(cliente),
+					<td><%= link_to 'Info', cliente_path(cliente), class:'waves-effect waves-light btn'%></td>
+				    <td><%= link_to 'Editar', edit_cliente_path(cliente), class:'waves-effect waves-light btn'%></td>
+				    <td><%= link_to 'Deletar', cliente_path(cliente), class:'waves-effect waves-light btn',
 									method: :delete,
 									data: { confirm: 'Tem certeza?' } %></td>
 					</tr>

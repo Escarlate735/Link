@@ -1,19 +1,15 @@
 <nav>
 	<div class="nav-wrapper">
 		<div class="col s12">
-			<a href="http://localhost:3000/welcome/index" class="breadcrumb">Welcome</a>
-			<a href="http://localhost:3000/clientes" class="breadcrumb">Patrocinadores</a>
-      <a href="http://localhost:3000/clientes/edit" class="breadcrumb">Editar Conta</a>
+			<%= link_to 'Home',{controller: 'welcome'}, class: 'breadcrumb'%>
+      <%= link_to 'Patrocinadores', clientes_path, class: 'breadcrumb'%>
+      <%= link_to 'Editar Conta' , edit_cliente_path(@cliente), class: 'breadcrumb'%>
 		</div>
 	</div>
 </nav>
 
 
-<div class="section no-pad-bot">
-	<div class="container">
-		<div class="section white">
+<div class="section no-pad-bot container section white">
 <h1>Dados pessoais:</h1>
 <%= render "form" %>
-</div>
-</div>
 </div>

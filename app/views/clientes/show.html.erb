@@ -1,4 +1,12 @@
-
+<nav>
+  <div class="nav-wrapper">
+    <div class="col s12">
+      <%= link_to 'Home', {controller: 'welcome'}, class: 'breadcrumb'%>
+      <%= link_to 'Patrocinadores', clientes_path, class: 'breadcrumb'%>
+      <%= link_to 'Info' , cliente_path(@cliente), class: 'breadcrumb'%>
+    </div>
+  </div>
+</nav>
 <p>
   <strong>Nome:</strong>
   <%= @cliente.Nome %>
@@ -61,5 +69,5 @@
 <h2 class="1">Seja sócio:</h2>
 <%= render 'pacotes/form' %>
 
-<%= link_to 'Editar dados' , edit_cliente_path(@cliente) %>
-<%= link_to 'Voltar', clientes_path %>
+<%= link_to 'Editar dados' , edit_cliente_path(@cliente), class:'waves-effect waves-light btn-small'%>
+<%= link_to 'Voltar', clientes_path, class:'waves-effect waves-light btn-small'%>

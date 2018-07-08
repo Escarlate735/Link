@@ -1,8 +1,7 @@
-
 <%= form_with(model: [ @cliente, @cliente.pacotes.build ], local: true) do |form| %>
   <p class="1">
     <%= form.label :Pagamento %><br>
-    <%= form.text_field :Pagamento %>
+    <%= form.text_field :Pagamento, 'data-mask': "R$ 0.000.000.000,00", placeholder: "R$ 1.000.000.000,00"%>
   </p>
   <p class="1">
     <%= form.label :Plano %><br>

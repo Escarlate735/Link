@@ -1,9 +1,9 @@
 <nav>
 	<div class="nav-wrapper">
 		<div class="col s12">
-			<a href="http://localhost:3000/welcome/index" class="breadcrumb">Welcome</a>
-			<a href="http://localhost:3000/clientes" class="breadcrumb">Patrocinadores</a>
-      <a href="http://localhost:3000/clientes/new" class="breadcrumb">Editar Conta</a>
+      <%= link_to 'Home', {controller: 'welcome'}, class: 'breadcrumb'%>
+      <%= link_to 'Patrocinadores', clientes_path, class: 'breadcrumb'%>
+      <%= link_to 'Nova Conta' , new_cliente_path(@cliente), class: 'breadcrumb'%>
 		</div>
 	</div>
 </nav>
