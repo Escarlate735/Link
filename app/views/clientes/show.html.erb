@@ -45,13 +45,23 @@
 
 <script>
     $(function() {
+        var hidden = true;
         $("#0").click(function(){
-            $(".0").slideToggle();
+            if (hidden) {
+                $(".0").slideDown();
+                $("#0").text("Esconder pacotes");
+                hidden = false;
+            }
+            else{
+                $(".0").slideUp();
+                $("#0").text("Ver pacotes");
+                hidden = true;
+            }
         })
     })
 </script>
 
-<button id="0" type="button">Ver/Esconder pacotes</button>
+<button id="0" type="button">Ver pacotes</button>
 
 <h2 class="0">Pacotes</h2>
 <%= render @cliente.pacotes %>
