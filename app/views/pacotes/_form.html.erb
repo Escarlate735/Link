@@ -1,14 +1,8 @@
 <%= form_with(model: [ @cliente, @cliente.pacotes.build ], local: true) do |form| %>
 
-  <script>
-    $(function () {
-        $("#pagamento").mask("#.##0,00",{reverse: true, placeholder: "10.000,00"});
-    })
-  </script>
-
   <p class="1">
     <%= form.label :Pagamento %><br>
-    <%= form.text_field :Pagamento, id:"pagamento"%>
+    <%= form.text_field :Pagamento, 'data-mask':"#.##0,00", 'data-mask-reverse': true, placeholder:"10.000,00"%>
   </p>
   <p class="1">
     <%= form.label :Plano %><br>
