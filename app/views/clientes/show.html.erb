@@ -36,16 +36,14 @@
   <strong>Status:</strong>
   <%= @cliente.Status %>
 </p>
+
+<%= link_to 'Editar dados' , edit_cliente_path(@cliente), class:'waves-effect waves-light btn-small'%><br><br>
+
 <script>
   $(function(){
     $(".0").hide();
+      var hidden = true;
     $(".1").hide();
-  })
-</script>
-
-<script>
-    $(function() {
-        var hidden = true;
         $("#0").click(function(){
             if (hidden) {
                 $(".0").slideDown();
@@ -61,7 +59,7 @@
     })
 </script>
 
-<button id="0" type="button">Ver pacotes</button>
+<button id="0" type="button" class="waves-effect waves-light btn-small">Ver pacotes</button>
 
 <h2 class="0">Pacotes</h2>
 <%= render @cliente.pacotes %>
@@ -74,10 +72,7 @@
   })
 </script>
 
-<button id="1" type="button">Novo Pacote</button>
+<button id="1" type="button" class="waves-effect waves-light btn-small">Novo Pacote</button>
 
 <h2 class="1">Seja sócio:</h2>
 <%= render 'pacotes/form' %>
-
-<%= link_to 'Editar dados' , edit_cliente_path(@cliente), class:'waves-effect waves-light btn-small'%>
-<%= link_to 'Voltar', clientes_path, class:'waves-effect waves-light btn-small'%>

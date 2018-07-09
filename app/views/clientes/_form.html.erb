@@ -32,12 +32,12 @@
 
   <p>
     <%= form.label :Endereco %><br>
-    <%= form.text_field :Endereco, 'data-mask':"Quadra 000 Conjunto 00 Casa 00", placeholder:"Quadra 000 Conjunto 00 Casa 00"%>
+    <%= form.text_field :Endereco, 'data-mask':"Quadra 000 Conjunto 09 Casa 09", placeholder:"Quadra 000 Conjunto 09 Casa 09"%>
   </p>
 
   <p>
     <%= form.label :Data_de_Nascimento %><br>
-    <%= form.text_field :Data_de_Nascimento, 'data-mask':"00/00/0000", placeholder:"00/00/0000"%>
+    <%= form.text_field :Data_de_Nascimento, 'data-mask':"09/09/0000", placeholder:"09/09/0000"%>
   </p>
 
   <p>
@@ -46,7 +46,7 @@
   </p>
 
   <p>
-    <%= form.submit %>
+  <%= submit_tag "Submeter dados" %>
   </p>
 <% end %>
 </div>

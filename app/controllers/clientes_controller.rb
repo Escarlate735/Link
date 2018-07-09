@@ -1,6 +1,6 @@
 class ClientesController < ApplicationController
 
-  #http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :new]
+ # http_basic_authenticate_with name: "Struct", password: "triforce", except: [:index, :new, :create]
 
   def index
     @clientes = Cliente.all
@@ -22,7 +22,8 @@ class ClientesController < ApplicationController
     @cliente = Cliente.new(cliente_params)
 
     if @cliente.save
-    redirect_to @cliente
+      TesteMailer.testando(@cliente).deliver
+      redirect_to @cliente
     else
       render 'new'
     end

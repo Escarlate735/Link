@@ -12,15 +12,16 @@
 		<div class="section white">
 			<div class="row"></div>
 			<div class="row center">
-				<a href="http://localhost:3000/clientes/new" class="btn tooltipped waves-effect waves-light btn" data-position="bottom" data-tooltip="Crie sua conta!">Ajude-nos a derrotar Ganon</a>
+				<%=  link_to "Ajude-nos a derrotar Ganon", new_cliente_path(@cliente), class:"btn tooltipped waves-effect waves-light btn", 'data-position':"bottom", 'data-tooltip':"Crie sua conta!"%>
 			</div>
 			<div class="row"></div>
+
+
 
 			<table class="highlight">
 				<thead>
 					<tr>
 						<th>Nome</th>
-						<th>Email</th>
             <th>Status</th>
 						<th colspan="3"></th>
 					</tr>
@@ -29,7 +30,6 @@
 				<% @clientes.each do |cliente|%>
 					<tr>
 					<td><%= cliente.Nome %></td>
-					<td><%= cliente.Email %></td>
 					<td><%= cliente.Status %></td>
 					<td><%= link_to 'Info', cliente_path(cliente), class:'waves-effect waves-light btn' %></td>
 				    <td><%= link_to 'Editar', edit_cliente_path(cliente), class:'waves-effect waves-light btn' %></td>
